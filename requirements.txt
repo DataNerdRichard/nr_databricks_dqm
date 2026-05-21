@@ -1,0 +1,5 @@
+requests>=2.31.0
+pandas>=2.0.0
+databricks-sdk>=0.20.0
+python-dotenv>=1.0.0
+pyspark>=3.5.0
