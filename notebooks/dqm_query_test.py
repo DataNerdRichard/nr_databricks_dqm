@@ -56,7 +56,7 @@ _NR_MAX_BATCH_BYTES = 900_000
 
 def build_dqm_events(row: dict) -> list[dict]:
     base = {
-        "event_time"    : str(row.get("event_time")),
+        "event_time"    : int(row["event_time"].timestamp() * 1000) if row.get("event_time") else None,
         "catalog_name"  : row.get("catalog_name"),
         "schema_name"   : row.get("schema_name"),
         "table_name"    : row.get("table_name"),
